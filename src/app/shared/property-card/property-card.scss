@@ -43,3 +43,25 @@ article {
     margin: 20px;
   }
 }
+@media (max-width: 768px) {
+  article {
+    aspect-ratio: 4 / 3;
+  }
+  article h2 {
+    margin: 16px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  article {
+    aspect-ratio: 3 / 2;
+  }
+  article h2 {
+    margin: 14px;
+    font-size: 16px;
+  }
+  article:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

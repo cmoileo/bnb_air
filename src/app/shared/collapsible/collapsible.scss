@@ -76,3 +76,29 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .collapsible .collapsible-header {
+    padding: 14px 16px;
+  }
+  .collapsible .collapsible-header h2 {
+    font-size: 16px;
+  }
+  .collapsible .collapsible-content .content-wrapper p {
+    padding: 16px 0;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .collapsible {
+    margin-bottom: 14px;
+  }
+  .collapsible .collapsible-header {
+    padding: 12px 14px;
+  }
+  .collapsible .collapsible-content .content-wrapper {
+    padding: 0 16px;
+  }
+  .collapsible .collapsible-content .content-wrapper p {
+    padding: 14px 0;
+  }
+}
