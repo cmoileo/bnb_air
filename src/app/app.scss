@@ -1,0 +1,30 @@
+@use '../styles/variables' as *;
+
+header {
+  margin-top: 45px;
+  margin-bottom: 50px;
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      display: flex;
+      gap: 55px;
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+footer {
+  background-color: $bg-dark;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 60px 0 30px;
+  margin-top: 30px;
+}

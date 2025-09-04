@@ -1,0 +1,78 @@
+@use '../../../styles/variables' as *;
+
+.collapsible {
+  background-color: $primary-color;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.25s ease-out;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    background-color: $primary-color;
+    transition: background-color 0.2s ease-out;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    h2 {
+      color: white;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .chevron {
+      transition: transform 0.3s ease-out;
+      transform-origin: center;
+      flex-shrink: 0;
+    }
+  }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: $bg-muted;
+    transition: max-height 0.35s ease-out;
+
+    .content-wrapper {
+      padding: 0 20px;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition:
+        opacity 0.25s ease-out 0.05s,
+        transform 0.25s ease-out 0.05s;
+
+      p {
+        margin: 0;
+        line-height: 1.6;
+        padding: 20px 0;
+      }
+    }
+  }
+
+  &.expanded {
+    .chevron {
+      transform: rotate(180deg);
+    }
+
+    .collapsible-content {
+      max-height: 500px;
+
+      .content-wrapper {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

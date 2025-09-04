@@ -1,0 +1,12 @@
+<main class="side-margin">
+  <section id="section_1">
+    <img src="/images/bg_main.png" alt="" />
+    <div class="dark-layer"></div>
+    <h1 class="text-3xl text-main">Chez vous, partout et ailleurs</h1>
+  </section>
+  <section class="bg-muted" id="section_2">
+    @for (property of properties(); track property.id) {
+      <app-property-card [property]="property" />
+    }
+  </section>
+</main>

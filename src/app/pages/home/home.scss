@@ -1,0 +1,42 @@
+#section_1 {
+  height: 223px;
+  width: 100%;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 45px;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .dark-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+  }
+
+  h1 {
+    z-index: 9;
+    position: relative;
+    width: fit-content;
+  }
+}
+
+#section_2 {
+  padding: 55px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  border-radius: 25px;
+}

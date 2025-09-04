@@ -1,0 +1,163 @@
+@use 'variables' as *;
+
+.text-xs {
+  font-size: $text-xs;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: $text-sm;
+  line-height: 1.25rem;
+}
+
+.text-m {
+  font-size: $text-m;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: $text-lg;
+  line-height: 1.75rem;
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
+}
+
+.text-xl {
+  font-size: $text-xl;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: $text-2xl;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: $text-3xl;
+  line-height: 2.25rem;
+}
+
+.text-light {
+  font-weight: $font-light;
+}
+
+.text-regular {
+  font-weight: $font-regular;
+}
+
+.text-medium {
+  font-weight: $font-medium;
+}
+
+.text-semibold {
+  font-weight: $font-semibold;
+}
+
+.text-bold {
+  font-weight: $font-bold;
+}
+
+.text-extrabold {
+  font-weight: $font-extrabold;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-accent {
+  color: $text-primary;
+}
+
+.text-dark {
+  color: $text-dark;
+}
+
+.text-gray {
+  color: $text-secondary;
+}
+
+.bg-primary {
+  background-color: $bg-primary;
+}
+
+.bg-muted {
+  background-color: $bg-muted;
+}
+
+.bg-primary-color {
+  background-color: $primary-color;
+}
+
+.bg-secondary-color {
+  background-color: $secondary-color;
+}
+
+.bg-accent-color {
+  background-color: $accent-color;
+}
+
+@media (min-width: 1200px) {
+  .side-margin {
+    margin-left: $side-margin-lg;
+    margin-right: $side-margin-lg;
+  }
+}
+@media (max-width: 1200px) {
+  .side-margin {
+    margin-left: $side-margin-md;
+    margin-right: $side-margin-md;
+  }
+}
+@media (max-width: 768px) {
+  .side-margin {
+    margin-left: $side-margin-sm;
+    margin-right: $side-margin-sm;
+  }
+}
+@media (max-width: 480px) {
+  .side-margin {
+    margin-left: $side-margin-xs;
+    margin-right: $side-margin-xs;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: $primary-color;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: $primary-color;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    color: $primary-color;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
